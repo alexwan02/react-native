@@ -278,7 +278,7 @@ public:
 ```
 
 
-可以看到除了JSExecutor.cpp实现了抽象类JSExecutor里的方法，ProxyExecutor.cpp也实现了它里面的方法，这是RN给了我们自定义JS解析器的能力，可以在CatalystInstance.Builder里
+可以看到除了JSCExexutor.cpp实现了抽象类JSExecutor里的方法，ProxyExecutor.cpp也实现了它里面的方法，这是RN给了我们自定义JS解析器的能力，可以在CatalystInstance.Builder里
 setJSExecutor()，具体可以参见JavaJSExecutor与ProxyJavaScriptExecutor，它们的类图如下所示：
 
 <img src="https://github.com/guoxiaoxing/react-native/raw/master/art/source/3/UMLClassDiagram-cxxbridge-ProxyJavaScriptExecutor.png"/>
@@ -295,7 +295,7 @@ RN应用的启动流程图如下所示：
 详细流程：
 
 ```
-1 在程序启动的时候，也就是ReContextactActivity的onCreate()函数中，我们会去创建一个ReactInstanceManagerImpl对象
+1 在程序启动的时候，也就是ReactContextActivity的onCreate()函数中，我们会去创建一个ReactInstanceManagerImpl对象
 
 2 ReactRootView作为整个RN应用的根视图，通过调用ReactRootView.startReactApplication()方法启动RN应用。
 
